@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab3.1ToolBar</string>
+    <string name="action_settings">Settings</string>
+    <string name="increase">Increase</string>
+    <string name="decrease">Decrease</string>
+    <string name="about">About</string>
+</resources>
