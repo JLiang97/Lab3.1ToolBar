@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Linking UI to program
         textViewMessage = (TextView) findViewById(R.id.textViewMessage);
-        size = textViewMessage.getTextSize();// / getScreenDensity();
+        size = textViewMessage.getTextSize() / getScreenDensity();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -74,9 +74,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public float getScreenDensity(){
-        float sizeDensity = 0;
+        float sizeDensity=0;
 
         DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+        sizeDensity = metrics.density;
 
         return sizeDensity;
     }
